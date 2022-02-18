@@ -1,0 +1,22 @@
+ALGORITHM Check3 
+var
+i,j,aux:integer;
+T:array of integer;
+
+begin
+
+aux=0
+i:=1
+while i < length(T)
+j:=i
+while j > 0 and T[j-1] > T[1]
+aux:=T[i]
+T[i]:=T[j-1]
+T[j-1]:=aux
+j:= i-1
+end while 
+i:=i+1
+end while 
+
+
+end 
